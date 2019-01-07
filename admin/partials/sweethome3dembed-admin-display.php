@@ -1,6 +1,6 @@
 <?php
 
-test_handle_post();
+esh3d_handle_upload();
 ?>
     <div class="wrap">
         <h1>SweetHome3D Manager</h1>
@@ -17,8 +17,8 @@ test_handle_post();
                     <div class="meta-box-sortables ui-sortable">
                         <form method="post">
                             <?php
-                            $this->customers_obj->prepare_items();
-                            $this->customers_obj->display(); ?>
+                            $this->sh3ds_obj->prepare_items();
+                            $this->sh3ds_obj->display(); ?>
                         </form>
                     </div>
                 </div>
@@ -28,22 +28,19 @@ test_handle_post();
     </div>
 <?php
 
-function test_handle_post(){
+function esh3d_handle_upload(){
     // First check if the file appears on the _FILES array
     if(isset($_FILES['sh3d_upload'])){
-        $sh3d = $_FILES['sh3d_upload'];
-
-        // Use the wordpress function to upload
-        // sh3d_upload corresponds to the position in the $_FILES array
-        // 0 means the content is not associated with any other posts
         $uploaded=media_handle_upload('sh3d_upload', 0);
         // Error checking using WP functions
         if(is_wp_error($uploaded)){
-            echo "Error uploading file: " . $uploaded->get_error_message();
+            echo '<div class="notice notice-error is-dismissible"><p>Upload fail!</p></div>';
+            wp_redirect( get_permalink() );
         }else{
-            echo "File upload successful!<br>";
             require_once plugin_dir_path( dirname( __FILE__ ) ). '../includes/class-sweethome3dembed-database.php';
             Sweethome3dembed_Database::getInstance()->add($uploaded);
+            echo '<div class="notice notice-success is-dismissible"><p>Upload success!</p></div>';
+            wp_redirect( get_permalink() );
         }
     }
 }

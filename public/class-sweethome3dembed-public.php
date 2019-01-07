@@ -99,8 +99,7 @@ class Sweethome3dembed_Public {
 		 * class.
 		 */
 
-		wp_enqueue_script( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'js/sweethome3dembed-public.js', array( 'jquery' ), $this->version, false );
-
+        /* libs */
         wp_enqueue_script($this->plugin_name.'big', plugin_dir_url( __FILE__ ) . 'js/lib/big.min.js', array(), $this->version, false);
         wp_enqueue_script($this->plugin_name.'gl-matrix', plugin_dir_url( __FILE__ ) . 'js/lib/gl-matrix-min.js', array(), $this->version, false);
         wp_enqueue_script($this->plugin_name.'jszip', plugin_dir_url( __FILE__ ) . 'js/lib/jszip.min.js', array(), $this->version, false);
@@ -109,6 +108,8 @@ class Sweethome3dembed_Public {
         wp_enqueue_script($this->plugin_name.'triangulator', plugin_dir_url( __FILE__ ) . 'js/lib/triangulator.min.js', array(), $this->version, false);
         wp_enqueue_script($this->plugin_name.'viewmodel', plugin_dir_url( __FILE__ ) . 'js/lib/viewmodel.min.js', array(), $this->version, false);
         wp_enqueue_script($this->plugin_name.'viewhome', plugin_dir_url( __FILE__ ) . 'js/lib/viewhome.min.js', array(), $this->version, false);
+        /* scripts */
+        wp_enqueue_script( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'js/sweethome3dembed-public.js', array( 'jquery' ), $this->version, false );
 	}
 
 	public function init() {

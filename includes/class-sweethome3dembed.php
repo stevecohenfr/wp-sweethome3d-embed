@@ -158,7 +158,7 @@ class Sweethome3dembed {
 		$this->loader->add_action( 'admin_enqueue_scripts', $plugin_admin, 'enqueue_scripts' );
 		$this->loader->add_action('admin_menu', $plugin_admin, 'add_to_admin_menu');
 		$this->loader->add_action( 'init', $plugin_admin, 'init');
-        $this->loader->add_filter('upload_mimes', $plugin_admin, 'allow_sh3d_extension', 1, 1);
+        //$this->loader->add_filter('upload_mimes', $plugin_admin, 'allow_sh3d_extension', 1, 1);
         $this->loader->add_filter( 'set-screen-option', $plugin_admin, 'set_screen', 10, 3 );
 	}
 

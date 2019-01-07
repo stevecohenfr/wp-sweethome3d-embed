@@ -4,7 +4,7 @@ if ( ! class_exists( 'WP_List_Table' ) ) {
     require_once( ABSPATH . 'wp-admin/includes/class-wp-list-table.php' );
 }
 
-class Customers_List extends WP_List_Table
+class Esh3d_List extends WP_List_Table
 {
 
     /** Singleton instance */
@@ -29,14 +29,14 @@ class Customers_List extends WP_List_Table
 
 
     /**
-     * Retrieve customers data from the database
+     * Retrieve sh3ds data from the database
      *
      * @param int $per_page
      * @param int $page_number
      *
      * @return mixed
      */
-    public static function get_customers( $per_page = 5, $page_number = 1 ) {
+    public static function get_sh3ds( $per_page = 5, $page_number = 1 ) {
 
         global $wpdb;
 
@@ -58,11 +58,11 @@ class Customers_List extends WP_List_Table
 
 
     /**
-     * Delete a customer record.
+     * Delete a sh3d record.
      *
-     * @param int $id customer ID
+     * @param int $id sh3d ID
      */
-    public static function delete_customer( $id ) {
+    public static function delete_sh3d( $id ) {
         global $wpdb;
 
         $wpdb->delete(
@@ -87,7 +87,7 @@ class Customers_List extends WP_List_Table
     }
 
 
-    /** Text displayed when no customer data is available */
+    /** Text displayed when no sh3d data is available */
     public function no_items() {
         _e( 'No model avaliable.', 'sp' );
     }
@@ -133,12 +133,12 @@ class Customers_List extends WP_List_Table
      */
     function column_name( $item ) {
 
-        $delete_nonce = wp_create_nonce( 'sp_delete_customer' );
+        $delete_nonce = wp_create_nonce( 'sp_delete_sh3d' );
 
         $title = '<strong>' . $item['name'] . '</strong>';
 
         $actions = [
-            'delete' => sprintf( '<a href="?page=%s&action=%s&customer=%s&_wpnonce=%s">Delete</a>', esc_attr( $_REQUEST['page'] ), 'delete', absint( $item['id'] ), $delete_nonce )
+            'delete' => sprintf( '<a href="?page=%s&action=%s&sh3d=%s&_wpnonce=%s">Delete</a>', esc_attr( $_REQUEST['page'] ), 'delete', absint( $item['id'] ), $delete_nonce )
         ];
 
         return $title . $this->row_actions( $actions );
@@ -204,7 +204,7 @@ class Customers_List extends WP_List_Table
         /** Process bulk action */
         $this->process_bulk_action();
 
-        $per_page     = $this->get_items_per_page( 'customers_per_page', 5 );
+        $per_page     = $this->get_items_per_page( 'sh3ds_per_page', 5 );
         $current_page = $this->get_pagenum();
         $total_items  = self::record_count();
 
@@ -213,7 +213,7 @@ class Customers_List extends WP_List_Table
             'per_page'    => $per_page //WE have to determine how many items to show on a page
         ] );
 
-        $this->items = self::get_customers( $per_page, $current_page );
+        $this->items = self::get_sh3ds( $per_page, $current_page );
     }
 
     public function process_bulk_action() {
@@ -224,16 +224,15 @@ class Customers_List extends WP_List_Table
             // In our file that handles the request, verify the nonce.
             $nonce = esc_attr( $_REQUEST['_wpnonce'] );
 
-            if ( ! wp_verify_nonce( $nonce, 'sp_delete_customer' ) ) {
+            if ( ! wp_verify_nonce( $nonce, 'sp_delete_sh3d' ) ) {
                 die( 'Go get a life script kiddies' );
             }
-            else {
-                self::delete_customer( absint( $_GET['customer'] ) );
+            else if (is_numeric($_GET['sh3d'])) {
+                self::delete_sh3d( absint( $_GET['sh3d'] ) );
 
                 // esc_url_raw() is used to prevent converting ampersand in url to "#038;"
                 // add_query_arg() return the current url
                 wp_redirect( esc_url_raw(add_query_arg()) );
-                exit;
             }
 
         }
@@ -247,14 +246,14 @@ class Customers_List extends WP_List_Table
 
             // loop over the array of record IDs and delete them
             foreach ( $delete_ids as $id ) {
-                self::delete_customer( $id );
-
+                if (is_numeric($id)) {
+                    self::delete_sh3d( $id );
+                }
             }
 
             // esc_url_raw() is used to prevent converting ampersand in url to "#038;"
             // add_query_arg() return the current url
             wp_redirect( esc_url_raw(add_query_arg()) );
-            exit;
         }
     }
 }

@@ -10,18 +10,18 @@
  *
  * @link              https://thevagabonds.fr
  * @since             1.0.0
- * @package           Sweethome3dembed
+ * @package           EmbedSweethome3d
  *
  * @wordpress-plugin
- * Plugin Name:       SweetHome3DEmbed
- * Plugin URI:        https://thevagabonds.fr/SweetHome3DEmbed
- * Description:       This is a short description of what the plugin does. It's displayed in the WordPress admin area.
+ * Plugin Name:       Embed-SweetHome3D
+ * Plugin URI:        https://thevagabonds.fr/Embed-SweetHome3D
+ * Description:       This extension allows you to embed your SweetHome3D house in your wordpress articles/pages.
  * Version:           1.0.0
  * Author:            Steve Cohen
- * Author URI:        https://thevagabonds.fr
+ * Author URI:        https://stevecohen.fr
  * License:           GPL-2.0+
  * License URI:       http://www.gnu.org/licenses/gpl-2.0.txt
- * Text Domain:       sweethome3dembed
+ * Text Domain:       embed-sweethome3d
  * Domain Path:       /languages
  */
 
@@ -35,7 +35,7 @@ if ( ! defined( 'WPINC' ) ) {
  * Start at version 1.0.0 and use SemVer - https://semver.org
  * Rename this for your plugin and update it as you release new versions.
  */
-define( 'PLUGIN_NAME_VERSION', '1.0.0' );
+define( 'EMBED-SWEETHOME3D_VERSION', '1.0.0' );
 
 /**
  * The code that runs during plugin activation.

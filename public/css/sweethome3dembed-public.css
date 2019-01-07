@@ -1,0 +1,16 @@
+/**
+ * All of the CSS for your public-facing functionality should be
+ * included in this file.
+ */
+
+.sweethome3d-model #viewerProgressDiv {
+    box-sizing: content-box;
+}
+
+.sweethome3d-model .copyright {
+    text-align: center;
+    width: 95%;
+    font-size: 12px;
+    line-height: 12px;
+    margin-top: -8px;
+}

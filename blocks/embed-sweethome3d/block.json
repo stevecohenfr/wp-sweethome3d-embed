@@ -2,7 +2,7 @@
 	"$schema": "https://schemas.wp.org/trunk/block.json",
 	"apiVersion": 3,
 	"name": "embed-sweethome3d/model",
-	"version": "2.0.0",
+	"version": "2.0.1",
 	"title": "SweetHome3D Model",
 	"category": "embed",
 	"icon": "admin-home",

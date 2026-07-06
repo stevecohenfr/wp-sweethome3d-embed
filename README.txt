@@ -5,7 +5,7 @@ Tags: sweethome3d, sh3d, 3d, house, viewer
 Requires at least: 6.4
 Tested up to: 6.8
 Requires PHP: 8.1
-Stable tag: 2.0.0
+Stable tag: 2.0.1
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -69,6 +69,9 @@ Edit the scenery of your 3D view in SweetHome3D. See [this article](http://www.s
 
 == Changelog ==
 
+= 2.0.1 =
+* Added bundled translations: French, Spanish, German, Italian and Brazilian Portuguese (admin screen, block editor and front-end messages).
+
 = 2.0.0 =
 * Full rewrite for modern WordPress (requires WP 6.4+ and PHP 8.1+).
 * New: Gutenberg block with live preview.
@@ -86,6 +89,9 @@ Edit the scenery of your 3D view in SweetHome3D. See [this article](http://www.s
 * First release.
 
 == Upgrade Notice ==
+
+= 2.0.1 =
+Adds French, Spanish, German, Italian and Brazilian Portuguese translations.
 
 = 2.0.0 =
 Major rewrite. Requires WordPress 6.4+ and PHP 8.1+. Existing shortcodes and models are preserved.

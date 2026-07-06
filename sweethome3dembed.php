@@ -11,7 +11,7 @@
  * Plugin Name:       Embed-SweetHome3D
  * Plugin URI:        https://thevagabonds.fr/Embed-SweetHome3D
  * Description:       Embed your SweetHome3D houses as interactive HTML5/WebGL models in your posts and pages, through a Gutenberg block or the [sh3d] shortcode.
- * Version:           2.0.0
+ * Version:           2.0.1
  * Requires at least: 6.4
  * Requires PHP:      8.1
  * Author:            Steve Cohen
@@ -34,7 +34,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 /**
  * Plugin constants.
  */
-const VERSION    = '2.0.0';
+const VERSION    = '2.0.1';
 const DB_VERSION = '2.0';
 
 define( __NAMESPACE__ . '\PLUGIN_FILE', __FILE__ );

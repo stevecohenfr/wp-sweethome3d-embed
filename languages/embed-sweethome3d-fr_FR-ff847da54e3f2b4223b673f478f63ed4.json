@@ -1,0 +1,45 @@
+{
+    "translation-revision-date": "2026-07-06T14:06:38+00:00",
+    "generator": "WP-CLI\/2.12.0",
+    "source": "assets\/js\/block.js",
+    "domain": "messages",
+    "locale_data": {
+        "messages": {
+            "": {
+                "domain": "messages",
+                "lang": "fr_FR",
+                "plural-forms": "nplurals=2; plural=(n > 1);"
+            },
+            "\u2014 Select a model \u2014": [
+                "\u2014 S\u00e9lectionnez un mod\u00e8le \u2014"
+            ],
+            "Hidden": [
+                "Masqu\u00e9"
+            ],
+            "Default panel": [
+                "Panneau par d\u00e9faut"
+            ],
+            "Model settings": [
+                "R\u00e9glages du mod\u00e8le"
+            ],
+            "Model": [
+                "Mod\u00e8le"
+            ],
+            "Aspect ratio": [
+                "Format d\u2019image"
+            ],
+            "Max width (px, 0 = responsive)": [
+                "Largeur max (px, 0 = responsive)"
+            ],
+            "Auto-rotation (rounds \/ min)": [
+                "Rotation automatique (tours \/ min)"
+            ],
+            "Navigation panel": [
+                "Panneau de navigation"
+            ],
+            "Select a SweetHome3D model in the block settings.": [
+                "S\u00e9lectionnez un mod\u00e8le SweetHome3D dans les r\u00e9glages du bloc."
+            ]
+        }
+    }
+}

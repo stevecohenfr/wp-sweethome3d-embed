@@ -1,82 +1,75 @@
 <?php
-
 /**
- * The plugin bootstrap file
+ * Embed-SweetHome3D
  *
- * This file is read by WordPress to generate the plugin information in the plugin
- * admin area. This file also includes all of the dependencies used by the plugin,
- * registers the activation and deactivation functions, and defines a function
- * that starts the plugin.
- *
- * @link              https://thevagabonds.fr
- * @since             1.0.0
- * @package           EmbedSweethome3d
+ * @package           EmbedSweetHome3D
+ * @author            Steve Cohen
+ * @copyright         2019-2026 Steve Cohen
+ * @license           GPL-2.0-or-later
  *
  * @wordpress-plugin
  * Plugin Name:       Embed-SweetHome3D
  * Plugin URI:        https://thevagabonds.fr/Embed-SweetHome3D
- * Description:       This extension allows you to embed your SweetHome3D house in your wordpress articles/pages.
- * Version:           1.0.0
+ * Description:       Embed your SweetHome3D houses as interactive HTML5/WebGL models in your posts and pages, through a Gutenberg block or the [sh3d] shortcode.
+ * Version:           2.0.0
+ * Requires at least: 6.4
+ * Requires PHP:      8.1
  * Author:            Steve Cohen
  * Author URI:        https://stevecohen.fr
- * License:           GPL-2.0+
- * License URI:       http://www.gnu.org/licenses/gpl-2.0.txt
+ * License:           GPL-2.0-or-later
+ * License URI:       https://www.gnu.org/licenses/gpl-2.0.html
  * Text Domain:       embed-sweethome3d
  * Domain Path:       /languages
  */
 
+declare( strict_types=1 );
+
+namespace EmbedSweetHome3D;
+
 // If this file is called directly, abort.
-if ( ! defined( 'WPINC' ) ) {
-	die;
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
 }
 
 /**
- * Currently plugin version.
- * Start at version 1.0.0 and use SemVer - https://semver.org
- * Rename this for your plugin and update it as you release new versions.
+ * Plugin constants.
  */
-define( 'EMBED-SWEETHOME3D_VERSION', '1.0.1' );
+const VERSION    = '2.0.0';
+const DB_VERSION = '2.0';
+
+define( __NAMESPACE__ . '\PLUGIN_FILE', __FILE__ );
+define( __NAMESPACE__ . '\PLUGIN_DIR', plugin_dir_path( __FILE__ ) );
+define( __NAMESPACE__ . '\PLUGIN_URL', plugin_dir_url( __FILE__ ) );
 
 /**
- * The code that runs during plugin activation.
- * This action is documented in includes/class-sweethome3dembed-activator.php
- */
-function activate_sweethome3dembed() {
-	require_once plugin_dir_path( __FILE__ ) . 'includes/class-sweethome3dembed-activator.php';
-	Sweethome3dembed_Activator::activate();
-}
-
-/**
- * The code that runs during plugin deactivation.
- * This action is documented in includes/class-sweethome3dembed-deactivator.php
- */
-function deactivate_sweethome3dembed() {
-	require_once plugin_dir_path( __FILE__ ) . 'includes/class-sweethome3dembed-deactivator.php';
-	Sweethome3dembed_Deactivator::deactivate();
-}
-
-register_activation_hook( __FILE__, 'activate_sweethome3dembed' );
-register_deactivation_hook( __FILE__, 'deactivate_sweethome3dembed' );
-
-/**
- * The core plugin class that is used to define internationalization,
- * admin-specific hooks, and public-facing site hooks.
- */
-require plugin_dir_path( __FILE__ ) . 'includes/class-sweethome3dembed.php';
-
-/**
- * Begins execution of the plugin.
+ * PSR-4 style autoloader for the plugin namespace.
  *
- * Since everything within the plugin is registered via hooks,
- * then kicking off the plugin from this point in the file does
- * not affect the page life cycle.
- *
- * @since    1.0.0
+ * Maps `EmbedSweetHome3D\Some\Class` to `src/Some/Class.php`.
  */
-function run_sweethome3dembed() {
+spl_autoload_register(
+	static function ( string $class ): void {
+		$prefix = __NAMESPACE__ . '\\';
+		if ( ! str_starts_with( $class, $prefix ) ) {
+			return;
+		}
 
-	$plugin = new Sweethome3dembed();
-	$plugin->run();
+		$relative = substr( $class, strlen( $prefix ) );
+		$path     = PLUGIN_DIR . 'src/' . str_replace( '\\', '/', $relative ) . '.php';
 
-}
-run_sweethome3dembed();
+		if ( is_readable( $path ) ) {
+			require $path;
+		}
+	}
+);
+
+// Lifecycle hooks.
+register_activation_hook( __FILE__, static fn() => Activator::activate() );
+register_deactivation_hook( __FILE__, static fn() => Deactivator::deactivate() );
+
+// Boot the plugin.
+add_action(
+	'plugins_loaded',
+	static function (): void {
+		Plugin::instance()->run();
+	}
+);

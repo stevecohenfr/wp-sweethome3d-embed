@@ -1,0 +1,15 @@
+/* Embed-SweetHome3D — admin styles. */
+
+.sweethome3d-upload.card {
+	max-width: 600px;
+	margin: 1em 0 2em;
+	padding: 1em 1.5em;
+}
+
+.sweethome3d-upload input[type="file"] {
+	margin-right: 10px;
+}
+
+.sweethome3d-upload .description {
+	margin-bottom: 1em;
+}

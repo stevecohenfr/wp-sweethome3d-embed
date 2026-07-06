@@ -1,0 +1,39 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "embed-sweethome3d/model",
+	"version": "2.0.0",
+	"title": "SweetHome3D Model",
+	"category": "embed",
+	"icon": "admin-home",
+	"description": "Embed an interactive SweetHome3D house exported to HTML5.",
+	"keywords": [ "sweethome3d", "sh3d", "3d", "house", "model" ],
+	"textdomain": "embed-sweethome3d",
+	"editorScript": "embed-sweethome3d-block-editor",
+	"supports": {
+		"html": false,
+		"align": [ "wide", "full" ]
+	},
+	"attributes": {
+		"id": {
+			"type": "number",
+			"default": 0
+		},
+		"width": {
+			"type": "number",
+			"default": 0
+		},
+		"ratio": {
+			"type": "string",
+			"default": "4:3"
+		},
+		"rotation": {
+			"type": "number",
+			"default": 0
+		},
+		"nav": {
+			"type": "string",
+			"default": "none"
+		}
+	}
+}

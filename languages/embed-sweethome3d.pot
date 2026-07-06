@@ -1,0 +1,209 @@
+# Copyright (C) 2026 Steve Cohen
+# This file is distributed under the GPL-2.0-or-later.
+msgid ""
+msgstr ""
+"Project-Id-Version: Embed-SweetHome3D 2.0.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/embed-sweethome3d\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2026-07-06T14:00:32+00:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.12.0\n"
+"X-Domain: embed-sweethome3d\n"
+
+#. Plugin Name of the plugin
+#: sweethome3dembed.php
+msgid "Embed-SweetHome3D"
+msgstr ""
+
+#. Plugin URI of the plugin
+#: sweethome3dembed.php
+msgid "https://thevagabonds.fr/Embed-SweetHome3D"
+msgstr ""
+
+#. Description of the plugin
+#: sweethome3dembed.php
+msgid "Embed your SweetHome3D houses as interactive HTML5/WebGL models in your posts and pages, through a Gutenberg block or the [sh3d] shortcode."
+msgstr ""
+
+#. Author of the plugin
+#: sweethome3dembed.php
+msgid "Steve Cohen"
+msgstr ""
+
+#. Author URI of the plugin
+#: sweethome3dembed.php
+msgid "https://stevecohen.fr"
+msgstr ""
+
+#: src/Admin/AdminPage.php:41
+#: src/Admin/AdminPage.php:42
+msgid "SweetHome3D"
+msgstr ""
+
+#: src/Admin/AdminPage.php:69
+msgid "Models per page"
+msgstr ""
+
+#: src/Admin/AdminPage.php:148
+msgid "You are not allowed to access this page."
+msgstr ""
+
+#. translators: %s: server upload size limit.
+#: src/Admin/AdminPage.php:176
+#, php-format
+msgid "The file is larger than the server allows (limit: %s). Ask your host to raise upload_max_filesize / post_max_size, then try again."
+msgstr ""
+
+#: src/Admin/AdminPage.php:185
+msgid "Model uploaded successfully."
+msgstr ""
+
+#: src/Admin/AdminPage.php:186
+msgid "Model deleted."
+msgstr ""
+
+#: src/Admin/AdminPage.php:187
+msgid "This file is not a valid SweetHome3D model (no Home.xml entry found). Please upload the house ZIP contained inside the HTML5 export."
+msgstr ""
+
+#. translators: %s: server upload size limit.
+#: src/Admin/AdminPage.php:190
+#, php-format
+msgid "The file is larger than the server allows (limit: %s). Ask your host to raise upload_max_filesize, then try again."
+msgstr ""
+
+#: src/Admin/AdminPage.php:193
+msgid "Upload failed. Please try again."
+msgstr ""
+
+#: src/Admin/ModelListTable.php:45
+msgid "Name"
+msgstr ""
+
+#: src/Admin/ModelListTable.php:46
+msgid "Shortcode"
+msgstr ""
+
+#: src/Admin/ModelListTable.php:47
+msgid "Date"
+msgstr ""
+
+#: src/Admin/ModelListTable.php:65
+#: src/Admin/ModelListTable.php:100
+msgid "Delete"
+msgstr ""
+
+#: src/Admin/ModelListTable.php:69
+msgid "No model available yet. Upload a SweetHome3D house ZIP above."
+msgstr ""
+
+#: src/Admin/ModelListTable.php:99
+msgid "Delete this model?"
+msgstr ""
+
+#: src/Frontend/ViewerRenderer.php:111
+msgid "This SweetHome3D model is invalid. Use the shortcode shown in the SweetHome3D admin screen (e.g. [sh3d id=1])."
+msgstr ""
+
+#: views/admin-page.php:22
+msgid "SweetHome3D Manager"
+msgstr ""
+
+#: views/admin-page.php:31
+msgid "Upload a model"
+msgstr ""
+
+#: views/admin-page.php:33
+msgid "Upload the house ZIP contained inside your SweetHome3D \"Export to HTML5\" archive."
+msgstr ""
+
+#: views/admin-page.php:38
+msgid "Upload"
+msgstr ""
+
+#: views/admin-page.php:42
+msgid "Your models"
+msgstr ""
+
+#: views/viewer.php:44
+msgid "HTML5 Viewer — distributed under the GNU General Public License"
+msgstr ""
+
+#: assets/js/block.js:23
+msgid "— Select a model —"
+msgstr ""
+
+#: assets/js/block.js:35
+msgid "Hidden"
+msgstr ""
+
+#: assets/js/block.js:36
+msgid "Default panel"
+msgstr ""
+
+#: assets/js/block.js:58
+msgid "Model settings"
+msgstr ""
+
+#: assets/js/block.js:60
+msgid "Model"
+msgstr ""
+
+#: assets/js/block.js:68
+msgid "Aspect ratio"
+msgstr ""
+
+#: assets/js/block.js:76
+msgid "Max width (px, 0 = responsive)"
+msgstr ""
+
+#: assets/js/block.js:84
+msgid "Auto-rotation (rounds / min)"
+msgstr ""
+
+#: assets/js/block.js:93
+msgid "Navigation panel"
+msgstr ""
+
+#: assets/js/block.js:113
+msgid "Select a SweetHome3D model in the block settings."
+msgstr ""
+
+#: blocks/embed-sweethome3d/block.json
+msgctxt "block title"
+msgid "SweetHome3D Model"
+msgstr ""
+
+#: blocks/embed-sweethome3d/block.json
+msgctxt "block description"
+msgid "Embed an interactive SweetHome3D house exported to HTML5."
+msgstr ""
+
+#: blocks/embed-sweethome3d/block.json
+msgctxt "block keyword"
+msgid "sweethome3d"
+msgstr ""
+
+#: blocks/embed-sweethome3d/block.json
+msgctxt "block keyword"
+msgid "sh3d"
+msgstr ""
+
+#: blocks/embed-sweethome3d/block.json
+msgctxt "block keyword"
+msgid "3d"
+msgstr ""
+
+#: blocks/embed-sweethome3d/block.json
+msgctxt "block keyword"
+msgid "house"
+msgstr ""
+
+#: blocks/embed-sweethome3d/block.json
+msgctxt "block keyword"
+msgid "model"
+msgstr ""

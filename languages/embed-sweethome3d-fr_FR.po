@@ -1,0 +1,204 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Embed-SweetHome3D 2.0.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/embed-sweethome3d\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: fr_FR\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Domain: embed-sweethome3d\n"
+
+#. Plugin Name of the plugin
+#: sweethome3dembed.php
+msgid "Embed-SweetHome3D"
+msgstr ""
+
+#. Plugin URI of the plugin
+#: sweethome3dembed.php
+msgid "https://thevagabonds.fr/Embed-SweetHome3D"
+msgstr ""
+
+#. Description of the plugin
+#: sweethome3dembed.php
+msgid "Embed your SweetHome3D houses as interactive HTML5/WebGL models in your posts and pages, through a Gutenberg block or the [sh3d] shortcode."
+msgstr ""
+
+#. Author of the plugin
+#: sweethome3dembed.php
+msgid "Steve Cohen"
+msgstr ""
+
+#. Author URI of the plugin
+#: sweethome3dembed.php
+msgid "https://stevecohen.fr"
+msgstr ""
+
+#: src/Admin/AdminPage.php:41
+#: src/Admin/AdminPage.php:42
+msgid "SweetHome3D"
+msgstr ""
+
+#: src/Admin/AdminPage.php:69
+msgid "Models per page"
+msgstr "Modèles par page"
+
+#: src/Admin/AdminPage.php:148
+msgid "You are not allowed to access this page."
+msgstr "Vous n’êtes pas autorisé à accéder à cette page."
+
+#. translators: %s: server upload size limit.
+#: src/Admin/AdminPage.php:176
+#, php-format
+msgid "The file is larger than the server allows (limit: %s). Ask your host to raise upload_max_filesize / post_max_size, then try again."
+msgstr "Le fichier dépasse la limite autorisée par le serveur (limite : %s). Demandez à votre hébergeur d’augmenter upload_max_filesize / post_max_size, puis réessayez."
+
+#: src/Admin/AdminPage.php:185
+msgid "Model uploaded successfully."
+msgstr "Modèle téléversé avec succès."
+
+#: src/Admin/AdminPage.php:186
+msgid "Model deleted."
+msgstr "Modèle supprimé."
+
+#: src/Admin/AdminPage.php:187
+msgid "This file is not a valid SweetHome3D model (no Home.xml entry found). Please upload the house ZIP contained inside the HTML5 export."
+msgstr "Ce fichier n’est pas un modèle SweetHome3D valide (aucune entrée Home.xml trouvée). Veuillez téléverser le ZIP de maison contenu dans l’export HTML5."
+
+#. translators: %s: server upload size limit.
+#: src/Admin/AdminPage.php:190
+#, php-format
+msgid "The file is larger than the server allows (limit: %s). Ask your host to raise upload_max_filesize, then try again."
+msgstr "Le fichier dépasse la limite autorisée par le serveur (limite : %s). Demandez à votre hébergeur d’augmenter upload_max_filesize, puis réessayez."
+
+#: src/Admin/AdminPage.php:193
+msgid "Upload failed. Please try again."
+msgstr "Échec du téléversement. Veuillez réessayer."
+
+#: src/Admin/ModelListTable.php:45
+msgid "Name"
+msgstr "Nom"
+
+#: src/Admin/ModelListTable.php:46
+msgid "Shortcode"
+msgstr ""
+
+#: src/Admin/ModelListTable.php:47
+msgid "Date"
+msgstr "Date"
+
+#: src/Admin/ModelListTable.php:65
+#: src/Admin/ModelListTable.php:100
+msgid "Delete"
+msgstr "Supprimer"
+
+#: src/Admin/ModelListTable.php:69
+msgid "No model available yet. Upload a SweetHome3D house ZIP above."
+msgstr "Aucun modèle disponible pour l’instant. Téléversez un ZIP de maison SweetHome3D ci-dessus."
+
+#: src/Admin/ModelListTable.php:99
+msgid "Delete this model?"
+msgstr "Supprimer ce modèle ?"
+
+#: src/Frontend/ViewerRenderer.php:111
+msgid "This SweetHome3D model is invalid. Use the shortcode shown in the SweetHome3D admin screen (e.g. [sh3d id=1])."
+msgstr "Ce modèle SweetHome3D est invalide. Utilisez le code court affiché dans l’écran d’administration SweetHome3D (par ex. [sh3d id=1])."
+
+#: views/admin-page.php:22
+msgid "SweetHome3D Manager"
+msgstr "Gestionnaire SweetHome3D"
+
+#: views/admin-page.php:31
+msgid "Upload a model"
+msgstr "Téléverser un modèle"
+
+#: views/admin-page.php:33
+msgid "Upload the house ZIP contained inside your SweetHome3D \"Export to HTML5\" archive."
+msgstr "Téléversez le ZIP de maison contenu dans votre archive « Exporter en HTML5 » de SweetHome3D."
+
+#: views/admin-page.php:38
+msgid "Upload"
+msgstr "Téléverser"
+
+#: views/admin-page.php:42
+msgid "Your models"
+msgstr "Vos modèles"
+
+#: views/viewer.php:44
+msgid "HTML5 Viewer — distributed under the GNU General Public License"
+msgstr "Visionneuse HTML5 — distribuée sous licence publique générale GNU"
+
+#: assets/js/block.js:23
+msgid "— Select a model —"
+msgstr "— Sélectionnez un modèle —"
+
+#: assets/js/block.js:35
+msgid "Hidden"
+msgstr "Masqué"
+
+#: assets/js/block.js:36
+msgid "Default panel"
+msgstr "Panneau par défaut"
+
+#: assets/js/block.js:58
+msgid "Model settings"
+msgstr "Réglages du modèle"
+
+#: assets/js/block.js:60
+msgid "Model"
+msgstr "Modèle"
+
+#: assets/js/block.js:68
+msgid "Aspect ratio"
+msgstr "Format d’image"
+
+#: assets/js/block.js:76
+msgid "Max width (px, 0 = responsive)"
+msgstr "Largeur max (px, 0 = responsive)"
+
+#: assets/js/block.js:84
+msgid "Auto-rotation (rounds / min)"
+msgstr "Rotation automatique (tours / min)"
+
+#: assets/js/block.js:93
+msgid "Navigation panel"
+msgstr "Panneau de navigation"
+
+#: assets/js/block.js:113
+msgid "Select a SweetHome3D model in the block settings."
+msgstr "Sélectionnez un modèle SweetHome3D dans les réglages du bloc."
+
+#: blocks/embed-sweethome3d/block.json
+msgctxt "block title"
+msgid "SweetHome3D Model"
+msgstr "Modèle SweetHome3D"
+
+#: blocks/embed-sweethome3d/block.json
+msgctxt "block description"
+msgid "Embed an interactive SweetHome3D house exported to HTML5."
+msgstr "Intégrez une maison SweetHome3D interactive exportée en HTML5."
+
+#: blocks/embed-sweethome3d/block.json
+msgctxt "block keyword"
+msgid "sweethome3d"
+msgstr ""
+
+#: blocks/embed-sweethome3d/block.json
+msgctxt "block keyword"
+msgid "sh3d"
+msgstr ""
+
+#: blocks/embed-sweethome3d/block.json
+msgctxt "block keyword"
+msgid "3d"
+msgstr ""
+
+#: blocks/embed-sweethome3d/block.json
+msgctxt "block keyword"
+msgid "house"
+msgstr ""
+
+#: blocks/embed-sweethome3d/block.json
+msgctxt "block keyword"
+msgid "model"
+msgstr ""
